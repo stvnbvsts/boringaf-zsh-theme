@@ -4,14 +4,14 @@ A sarcastically named Oh My Zsh theme with a colorful, compact developer dashboa
 
 ```text
 steven ~/Projects/boringaf-zsh-theme [git  main] [tag v0.1.0] [+2 ~1 ?3] [ahead 1 behind 0] [stash 1]
-OK λ
+λ
 ```
 
 On command failure:
 
 ```text
 steven ~/Projects/boringaf-zsh-theme [git  main] [+2 ~1 ?3]
-ERR 127 λ
+λ
 ```
 
 ## Install
@@ -46,7 +46,24 @@ The Git line shows:
 - conflicts as `!N`
 - ahead/behind counts
 - stash count
+- operation state: merge, rebase, cherry-pick, revert, or bisect
 
 The prompt does not show the time.
 
 The branch icon is the Powerline/Nerd Font glyph ``. If your terminal font does not support it, the prompt still works, but that icon may render as a box.
+
+## Context
+
+The prompt always shows the username. It adds `@host` only when you are connected over SSH or when `$USER` is different from `$DEFAULT_USER`.
+
+The second line shows command duration only when the previous command took at least `5s`:
+
+```text
+[5.231s] λ
+```
+
+You can change the threshold before loading Oh My Zsh:
+
+```zsh
+BORINGAF_DURATION_THRESHOLD=3
+```
