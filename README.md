@@ -2,6 +2,8 @@
 
 A sarcastically named Oh My Zsh theme with a colorful, compact developer dashboard prompt.
 
+The theme uses semantic ANSI colors like `cyan`, `magenta`, `green`, and `yellow` so it adapts to your terminal theme instead of fighting it with hard-coded 256-color values.
+
 ```text
 steven ~/Projects/boringaf-zsh-theme [git  main] [tag v0.1.0] [+2 ~1 ?3] [ahead 1 behind 0] [stash 1]
 λ
